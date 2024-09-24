@@ -11,7 +11,6 @@ class MyMeta extends HTMLElement {
                 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
                 <!--Termina el font-->
                 <link href="styles.css" rel="stylesheet">
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         `
     }
 }
