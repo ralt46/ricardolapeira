@@ -9,7 +9,7 @@ class MyHeader extends HTMLElement {
                     <div class="collapse navbar-collapse" id="mynavbar">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                            <a class="nav-link" href="home.html"><img src="../images/circle.png"></a>
+                            <a class="nav-link" href="home.html"><img src="/images/circle.png"></a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="services.html">Services</a>
