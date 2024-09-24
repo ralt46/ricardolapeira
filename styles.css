@@ -1,0 +1,198 @@
+/*usar esto para set el font de la pagina*/
+body {
+    font-family: "Jost", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F6F4EB;
+    font-size: 1.25em;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+#service{
+    border-bottom: 2px solid black;
+    margin-bottom: 5%;
+}
+
+#contact-footer {
+    border-top: 2px solid black;
+    margin-top: 5%;
+}
+
+blockquote {
+    padding-left: 5%;
+    font-style: italic;
+    font-weight: 300;
+}
+
+blockquote a {
+    color: black;
+}
+
+blockquote a:hover {
+    background-color: #91C8E4;
+}
+
+/*aca es donde escojo el color de fondo de los items del menu*/
+.nav-item:hover {
+    background-color: #91C8E4;
+}
+
+/*aca es para separar el espacio entre los items del menu*/
+.nav-item{
+    padding-right: 0%;
+}
+
+/* aca es donde fijo el navigation menu bar para que siempre este visible */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #F6F4EB;
+}
+
+/* esto hace que el menu quede por encima de todo lo demas, incluyendo los acordiones*/
+nav {
+    z-index: 9999;
+}
+
+.body-text{
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 30%;
+}
+
+/* esto corresponde al boton del menu*/
+.btn-primary {
+    --bs-btn-bg: #91C8E4;
+    --bs-btn-border-color: #91C8E4;
+    --bs-btn-hover-bg: #749BC2;
+    --bs-btn-hover-border-color: #749BC2;
+    font-size: 1em;
+    margin-right
+}
+
+/* esto corresponde a los botones dentro del body, es decir, los que no son el del menu de navegacion*/
+.btn-secondary {
+    --bs-btn-bg: #749BC2;
+    --bs-btn-border-color: #91C8E4;
+    --bs-btn-hover-bg: #4682A9;
+    --bs-btn-hover-border-color: #4682A9;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 0 px;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.vertical-center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+  }
+
+  .button p {
+    margin-top 0;
+    margin-bottom:  0;
+  }
+
+/*esta y la siguiente clase definen el efecto de los links dentro del body*/
+.no_class {
+    color:inherit;
+    text-decoration:inherit;
+    font-weight: bold;
+}
+
+a.no_class:hover {
+    background-color: #91C8E4;
+}
+
+/*este sirve en casos cuando el background color es el mismo que el hover, por ejemplo, en la secci[on de pricing en la p[agina de servicios*/
+.secondary-link {
+    color:inherit;
+    text-decoration:inherit;
+    font-weight: bold;
+}
+
+a.secondary-link:hover {
+    background-color: #F6F4EB !important;
+}
+
+/* Esto corresponde a los formatos del acordeon*/
+
+.accordion{
+    --bs-accordion-btn-color: black;
+    --bs-accordion-btn-bg: #91C8E4;
+    --bs-accordion-border-color: #91C8E4;
+    --bs-accordion-btn-focus-box-shadow: 0 #F6F4EB;
+    --bs-accordion-bg: #F6F4EB;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: #F6F4EB;
+    border-radius: 25px;
+}
+
+.accordion-body {
+    background-color: #91C8E4;
+    margin-bottom: 3%;
+    border-radius: 25px;
+}
+
+.accordion-flush>.accordion-item>.accordion-header .accordion-button, .accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed {
+    border-radius: 25px;
+    font-size: 1.25rem;
+}
+
+.accordion-header {
+    padding-right: 45%;
+}
+
+#my-work .accordion-header {
+    padding-right: 50%;
+}
+
+/*responsive*/
+@media (min-width: 1200px) {
+    .container .body-text{
+        float:left;
+        max-width: 40%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container .body-text{
+        float:left;
+        max-width: 40%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container .body-text{
+        float:left;
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 576px) {
+    .container .body-text{
+        float:left;
+        max-width: 80%;
+    }
+}
