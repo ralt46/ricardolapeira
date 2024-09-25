@@ -1,4 +1,4 @@
-class MyMeta extends HTMLElement {
+class MyHead extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
                 <title>Content Strategy Services</title>
@@ -15,4 +15,4 @@ class MyMeta extends HTMLElement {
     }
 }
 
-customElements.define('my-meta', MyMeta)
+customElements.define('my-head', MyHead)
