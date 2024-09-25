@@ -1,4 +1,4 @@
-class MyHeader extends HTMLElement {
+class MyMenu extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-expand-xl navbar-light" style="background-color: #F6F4EBf;">
@@ -34,4 +34,4 @@ class MyHeader extends HTMLElement {
     }
 }
 
-customElements.define('my-header', MyHeader)
+customElements.define('my-menu', MyMenu)
