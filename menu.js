@@ -9,19 +9,19 @@ class MyMenu extends HTMLElement {
                     <div class="collapse navbar-collapse" id="mynavbar">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                            <a class="nav-link" href="home.html"><img src="images/circle.png"></a>
+                            <a class="nav-link" href="/ricardolapeira/home.html"><img src="/ricardolapeira/images/circle.png"></a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <a class="nav-link" href="/ricardolapeira/services.html">Services</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                            <a class="nav-link" href="/ricardolapeira/portfolio.html">Portfolio</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
+                            <a class="nav-link" href="/ricardolapeira/blog.html">Blog</a>
                             </li>
                             <li class="nav-item final-menu-item">
-                            <a class="nav-link" href="cv.html">CV</a>
+                            <a class="nav-link" href="/ricardolapeira/cv.html">CV</a>
                             </li>
                         </ul>
                         <div>
