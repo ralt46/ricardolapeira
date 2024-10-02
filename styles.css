@@ -44,6 +44,10 @@ blockquote a:hover {
     background-color: #91C8E4;
 }
 
+.highlight {
+    background-color: #749BC2;
+}
+
 /*aca es donde escojo el color de fondo de los items del menu*/
 .nav-item:hover {
     background-color: #91C8E4;
