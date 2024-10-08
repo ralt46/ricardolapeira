@@ -20,9 +20,11 @@ class MyMenu extends HTMLElement {
                             <li class="nav-item">
                             <a class="nav-link" href="/ricardolapeira/main/blog.html">Blog</a>
                             </li>
+                            <!-- CV section is currently disabled as a comment
                             <li class="nav-item final-menu-item">
                             <a class="nav-link" href="/ricardolapeira/main/cv.html">CV</a>
                             </li>
+                            -->
                         </ul>
                         <div>
                             <a href="contact.html"><button class="btn btn-primary" type="button">Contact</button></a>
