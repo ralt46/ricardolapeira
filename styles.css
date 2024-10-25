@@ -185,10 +185,6 @@ a.secondary-link:hover {
         float:left;
         max-width: 40%;
     }
-
-    .body-text {
-        padding-right: 10%;
-    }
 }
 
 @media (min-width: 768px) {
@@ -196,29 +192,11 @@ a.secondary-link:hover {
         float:left;
         max-width: 60%;
     }
-
-    .body-text {
-        padding-right: 1%;
-    }
 }
 
 @media (min-width: 576px) {
     .container .body-text{
         float:left;
         max-width: 80%;
-    }
-
-    .body-text {
-        padding-right: 1%;
-    }
-
-@media (min-width: 320px) {
-    .container .body-text{
-        float:left;
-        max-width: 100%;
-    }
-
-    .body-text {
-        padding-right: 1%;
     }
 }
