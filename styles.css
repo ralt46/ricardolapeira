@@ -27,14 +27,37 @@ h3 {
     font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
+#contact-footer {
+    border-top: 2px solid black;
+    margin-top: 5%;
+}
+
+#contact-me {
+    max-width: 100%;
+    padding: 10% 8% 5%; 
+    /* line-break: auto; */
+}
+
+#grid-quotes {
+    display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+	'one one three three'
+	'two two three three'
+}
+
 #service{
     border-bottom: 2px solid black;
     margin-bottom: 5%;
 }
 
-#contact-footer {
-    border-top: 2px solid black;
+#pricing {
+    max-width: 100%;
+    background-color: #91C8E4; 
     margin-top: 5%;
+    padding: 5% 8% 5%;
+    border-radius: 25px;
 }
 
 blockquote {
@@ -102,6 +125,31 @@ nav {
     justify-content: center;
 }
 
+.testimonial {
+    font-size: clamp(1rem, 6vw, 1.25rem);
+    padding: 10% 8% 5%;
+    background-color: #749BC2;
+    border-radius: 25px;
+}
+
+.testimonial:hover {
+    box-shadow: 10px -5px #91C8E4;
+    transition: 1s;
+}
+
+/* en los siguientes tres elementos se define el grid layout para los quotes de la pagina de servicios */
+.testimonial:nth-child(1){
+	grid-area: one;
+}
+
+.testimonial:nth-child(2){
+	grid-area: two;
+}
+
+.testimonial:nth-child(3){
+    grid-area: three;
+}
+
 .vertical-center {
     margin: 0;
     position: relative;
@@ -127,7 +175,7 @@ a.no_class:hover {
     background-color: #91C8E4;
 }
 
-/*este sirve en casos cuando el background color es el mismo que el hover, por ejemplo, en la secci[on de pricing en la p[agina de servicios*/
+/*este sirve en casos cuando el background color es el mismo que el hover, por ejemplo, en la seccion de pricing en la p[agina de servicios*/
 .secondary-link {
     color:inherit;
     text-decoration:inherit;
@@ -150,7 +198,7 @@ a.secondary-link:hover {
 
 .accordion-button:not(.collapsed) {
     color: black;
-    background-color: #749BC2B;
+    background-color: #749BC2;
     border-radius: 25px;
 }
 
@@ -227,5 +275,9 @@ a.secondary-link:hover {
     .body-text{
         padding-top: 8%;
         padding-right: 30%;
+    }
+
+    .accordion-header {
+        max-width: 60%;
     }
 }

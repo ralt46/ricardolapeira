@@ -2,13 +2,13 @@
 <html lang="en">
   
     <head>
-      <script type="module" src="/ricardolapeira/head.js"></script>
+      <script type="module" src="../head.js"></script>
       <my-head></my-head>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
 
     <body>
-      <script type="module" src="/ricardolapeira/menu.js"></script>
+      <script type="module" src="../menu.js"></script>
       <my-menu></my-menu>
 
         <div class="container body-text" style="padding-bottom: 5%;">
@@ -17,7 +17,7 @@
                 <p>I can proudly say I've collaborated on multiple award-winning projects. My secret power is bringing people together to find that special something that is hiding in plain sight and then making incredible stuff happen.</p>
                 <p>You can think of me as someone who adds skills and bandwidth to your organization. Also, think of me as that person who likes to ask uncomfortable questions that will put your strategy to the test. As a philosopher, I do not follow a traditional consultancy approach. As an engineer, I am rigorous at what I do.</p>
             </div>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion accordion-flush" id="accordionFlushExample" >
                 <div class="accordion-item">
                     <h1 class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
@@ -51,7 +51,7 @@
                 </div>  
             </div>
                
-            <div style="padding-top: 4%;">    
+            <div style="padding-top: 4%; border-top: 2px solid black; margin-top: 5%;">    
                 <h2>My Services</h2>
                 <div id="service">
                     <h3>1) User Experience Audit</h3>
@@ -60,7 +60,7 @@
                         <li>Things that don't work or require attention</li>
                         <li>What works and should be replicated</li>
                         <li>UX Writing and UI assessment</li>
-                        <li>Overall functionality assessment</li>
+                        <li>Review of the overall functionality</li>
                     </ul>
                     <p>Also, I will suggest what best practices and general recommendations can easily be implemented without having to conduct additional expensive research.</p>
                     <!-- This element is currently as a comment until I finish the detailed page. <p>Find out more about the audit <a href="../services/user-experience-audit.html" class="no_class">here</a>.</p> -->
@@ -75,6 +75,7 @@
                         <li>Copywriting for websites</li>
                         <li>Ad campaigns</li>
                         <li>Sales pieces</li>
+                        <li>Landing pages</li>
                     </ul>
                     <!-- This element is currently as a comment until I finish the detailed page. <p>Learn more about these and other marketing solutions <a href="../services/marketing-pieces.html" class="no_class">here</a>.</p> -->
                 </div>
@@ -107,35 +108,37 @@
             <div>
                 <h2>What People Say</h2>
                 <br>
-                <div>
-                    <blockquote>
-                        <p>"I wasn't aware philosophy could be such a powerful tool to help me understand my brand. I now know better who we are and what we stand for."</p>
-                        <p><b>- Paola Gutiérrez, Founder Gau Shoewear</b></p>
-                    </blockquote>
+                <div id="grid-quotes">
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"I wasn't aware philosophy could be such a powerful tool to help me understand my brand. I now know better who we are and what we stand for."</p>
+                            <p><b>- Paola Gutiérrez, Founder Gau Shoewear</b></p>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"Ricardo's content strategy approach helped us identify critical pain points in our sales pipeline. Our improved UX has helped increase our sales."</p>
+                            <p><b>- Daniela Cepeda, <a href="https://decoratic.co/" target="_newtab"> Decoratic CEO</a></b></p>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"Working with Ricardo at Koombea was a transformative experience. One of Ricardo's most significant contributions was his unparalleled understanding of content strategy. He possesses an innate ability to dissect our brand's messaging needs and craft strategic content that speaks directly to our key target audiences. This expertise has been instrumental in refining Koombea's brand tone and ensuring our messaging was finely tuned towards our main demographics, thus fostering our growth on numerous fronts."</p>
+                            <p><b>- Jaime Vengoechea, <a href="https://www.koombea.com/" target="_newtab"> Koombea Growth Marketing Manager</a></b></p>
+                        </blockquote>
+                    </div>
                 </div>
                 <br>
-                <div>
-                    <blockquote>
-                        <p>"Ricardo's content strategy approach helped us identify critical pain points in our sales pipeline. Our improved UX has helped increase our sales."</p>
-                        <p><b>- Daniela Cepeda, <a href="https://decoratic.co/" target="_newtab"> Decoratic CEO</a></b></p>
-                    </blockquote>
-                </div>
-                <div>
-                    <blockquote id="service">
-                        <p>"Working with Ricardo at Koombea was a transformative experience. One of Ricardo’s most significant contributions was his unparalleled understanding of content strategy. He possesses an innate ability to dissect our brand’s messaging needs and craft strategic content that speaks directly to our key target audiences. This expertise has been instrumental in refining Koombea’s brand tone and ensuring our messaging was finely tuned towards our main demographics, thus fostering our growth on numerous fronts."</p>
-                        <p><b>- Jaime Vengoechea, <a href="https://www.koombea.com/" target="_newtab"> Koombea Growth Marketing Manager</a></b></p>
-                    </blockquote>
-                </div>
             </div>
-
-            <div class="container body-text" style="background-color: #91C8E4; padding-bottom: 5%; padding-right: 5%; border-radius: 25px;">
+            
+            <div id="pricing" class="container body-text">
                 <h1>Pricing</h1>
                 <p>Each project is unique. That is why I prefer to discuss your needs in detail.</p>
                 <p>Depending on your goals, I will offer you a custom project-based solution. This will give you a considerable amount of flexibility while taking care of your budget and calendars. You will not be charged by the hour but on the overall value of the project.</p> 
                 <p>To learn more, visit the <a class="secondary-link" href="../secondary/pricing.html">pricing</a> section.</p>
             </div>
 
-            <div class="container body-text" style="padding-right: 5%; line-break: auto;">
+            <div id="contact-me" class="container body-text">
                 <h1>Contact Me</h1>
                 <p>Don't see what you are looking for? Want to discuss in further detail your needs?</p>
                 <p>Send me an <a href="lapeirar@gmail.com" target="_newtab" class="no_class">email to lapeirar@gmail.com</a> so that we can discuss in further detail your needs.</p>
