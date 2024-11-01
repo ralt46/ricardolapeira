@@ -34,17 +34,7 @@ h3 {
 
 #contact-me {
     max-width: 100%;
-    padding: 10% 8% 5%; 
-    /* line-break: auto; */
-}
-
-#grid-quotes {
-    display: grid;
-	gap: 1rem;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-areas:
-	'one one three three'
-	'two two three three'
+    padding: 5% 8% 5%; 
 }
 
 #service{
@@ -127,9 +117,10 @@ nav {
 
 .testimonial {
     font-size: clamp(1rem, 6vw, 1.25rem);
-    padding: 10% 8% 5%;
+    padding: 5% 8% 2%;
     background-color: #749BC2;
     border-radius: 25px;
+    margin-bottom: 5%;
 }
 
 .testimonial:hover {
@@ -139,16 +130,16 @@ nav {
 
 /* en los siguientes tres elementos se define el grid layout para los quotes de la pagina de servicios */
 .testimonial:nth-child(1){
-	grid-area: one;
+    grid-area: one;
 }
 
 .testimonial:nth-child(2){
-	grid-area: two;
+    grid-column: two;
 }
 
-.testimonial:nth-child(3){
-    grid-area: three;
-}
+.testimonial:nth-child(3) {
+	grid-area: three;
+} 
 
 .vertical-center {
     margin: 0;
@@ -214,7 +205,7 @@ a.secondary-link:hover {
 }
 
 .accordion-header {
-    max-width: 70%;
+    max-width: 80%;
 }
 
 #my-work .accordion-header {
@@ -226,11 +217,19 @@ a.secondary-link:hover {
     .body-text{
         padding-top: 15%;
     }
+
+    .accordion-header {
+        max-width: 90%;
+    }
 }
 
 @media (min-width: 576px) {
     .container .body-text{
         float:left;
+        max-width: 80%;
+    }
+
+    .accordion-header {
         max-width: 80%;
     }
 }
@@ -249,8 +248,26 @@ a.secondary-link:hover {
         padding-top: 15%;
     }
 
+    .accordion-header {
+        max-width: 70%;
+    }
+
+    .testimonial {
+        padding: 10% 8% 10%;
+    }
+
     #my-work .accordion-header {
         max-width: 60%;
+    }
+
+    #grid-quotes {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-template-areas: 
+        'one three'
+        'two three';
+        min-width: 100%;
     }
 }
 
@@ -279,5 +296,15 @@ a.secondary-link:hover {
 
     .accordion-header {
         max-width: 60%;
+    }
+
+    #grid-quotes {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-areas: 
+        'one three'
+        'two three';
+        min-width: 100%;
     }
 }
