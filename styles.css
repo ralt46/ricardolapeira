@@ -4,20 +4,27 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #F6F4EB;
-    font-size: 1.25em;
+    font-size: clamp(1rem, 6vw, 1.25rem);
+    max-width: 100%;
+}
+
+.body-text{
+    padding-left: 5%;
+    padding-top: 30%;
+    padding-right: 10%;
 }
 
 h1 {
-    font-size: 4em;
+    font-size: clamp(1.5rem, 6vw, 4rem);
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: clamp(1.5rem, 3.5vw, 2.5em);
 }
 
 h3 {
     font-style: italic;
-    font-size: 1.5em;
+    font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
 #service{
@@ -71,19 +78,13 @@ nav {
     z-index: 9999;
 }
 
-.body-text{
-    padding-left: 5%;
-    padding-top: 5%;
-    padding-right: 30%;
-}
-
 /* esto corresponde al boton del menu*/
 .btn-primary {
     --bs-btn-bg: #91C8E4;
     --bs-btn-border-color: #91C8E4;
     --bs-btn-hover-bg: #749BC2;
     --bs-btn-hover-border-color: #749BC2;
-    font-size: 1em;
+    font-size: clamp(1rem, 6vw, 1.25rem);
     margin-right
 }
 
@@ -149,7 +150,7 @@ a.secondary-link:hover {
 
 .accordion-button:not(.collapsed) {
     color: black;
-    background-color: #F6F4EB;
+    background-color: #749BC2B;
     border-radius: 25px;
 }
 
@@ -161,29 +162,28 @@ a.secondary-link:hover {
 
 .accordion-flush>.accordion-item>.accordion-header .accordion-button, .accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed {
     border-radius: 25px;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 6vw, 1.25rem);
 }
 
 .accordion-header {
-    padding-right: 45%;
+    max-width: 70%;
 }
 
 #my-work .accordion-header {
-    padding-right: 50%;
+    max-width: 80%;
 }
 
 /*responsive*/
-@media (min-width: 1200px) {
-    .container .body-text{
-        float:left;
-        max-width: 40%;
+@media (min-width: 400px) {
+    .body-text{
+        padding-top: 15%;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
     .container .body-text{
         float:left;
-        max-width: 40%;
+        max-width: 80%;
     }
 }
 
@@ -192,11 +192,40 @@ a.secondary-link:hover {
         float:left;
         max-width: 60%;
     }
+
+    .body{
+        max-width: 70%;
+    }
+
+    .body-text{
+        padding-top: 15%;
+    }
+
+    #my-work .accordion-header {
+        max-width: 60%;
+    }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
     .container .body-text{
         float:left;
-        max-width: 80%;
+        max-width: 40%;
+    }
+
+    .body-text{
+        padding-top: 10%;
+        padding-right: 30%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container .body-text{
+        float:left;
+        max-width: 40%;
+    }
+
+    .body-text{
+        padding-top: 8%;
+        padding-right: 30%;
     }
 }
