@@ -121,6 +121,7 @@ nav {
     background-color: #749BC2;
     border-radius: 25px;
     margin-bottom: 5%;
+    transition: all ease-in-out 1.2s;
 }
 
 .testimonial:hover {
