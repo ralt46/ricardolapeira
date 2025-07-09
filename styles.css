@@ -218,10 +218,14 @@ input {
     border-radius: 20px;
     padding-left: 15px;
     border: none;
+    margin-bottom: 10px;
 }
 
 .contact {
     background-color: #91C8E4;
+    padding-left: 30px;
+    padding-top: 30px;
+    border-radius: 15px;
 }
 
 .contact p {
@@ -231,6 +235,7 @@ input {
 .input-message {
     padding-left: 15px;
     padding-right: 15px;
+    border: none;
 }
 
 /*responsive*/
