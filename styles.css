@@ -113,6 +113,7 @@ nav {
     align-items: center;
     position: relative;
     justify-content: center;
+    font-size: clamp(1rem, 6vw, 1.25rem);
 }
 
 .testimonial {
@@ -219,12 +220,14 @@ input {
     padding-left: 15px;
     border: none;
     margin-bottom: 10px;
+    width: 40%;
 }
 
 .contact {
     background-color: #91C8E4;
     padding-left: 30px;
     padding-top: 30px;
+    padding-bottom: 30px;
     border-radius: 15px;
 }
 
@@ -236,6 +239,7 @@ input {
     padding-left: 15px;
     padding-right: 15px;
     border: none;
+    width: 60%;
 }
 
 /*responsive*/
