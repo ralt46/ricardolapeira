@@ -213,6 +213,26 @@ a.secondary-link:hover {
     max-width: 80%;
 }
 
+/* Contact form */
+input {
+    border-radius: 20px;
+    padding-left: 15px;
+    border: none;
+}
+
+.contact {
+    background-color: #91C8E4;
+}
+
+.contact p {
+    margin-left: 15px;
+}
+
+.input-message {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 /*responsive*/
 @media (min-width: 400px) {
     .body-text{
