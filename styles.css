@@ -235,6 +235,10 @@ input {
     margin-left: 15px;
 }
 
+.contact h2 {
+    margin-bottom: 30px;
+}
+
 .input-message {
     padding-left: 15px;
     padding-right: 15px;
