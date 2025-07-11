@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <script type="module" src="../head.js"></script>
+    <my-head></my-head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <script type="module" src="../menu.js"></script>
+    <my-menu></my-menu>
+    
+    <div class="container body-text">
+      <div class="contact">
+        <h1>Thanks!</h1>
+        <h2>Your message has been sent</h2>
+        <p>You will receive a reply very soon.</p>
+        
+      </div>
+    </div>
+    
+  </body>
+</html>
