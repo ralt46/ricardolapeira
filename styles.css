@@ -57,11 +57,11 @@ blockquote {
 }
 
 blockquote p {
-    color: white;
+    color: black;
 }
 
 blockquote a {
-    color: white;
+    color: black;
 }
 
 blockquote a:hover {
@@ -123,10 +123,10 @@ nav {
 .testimonial {
     font-size: clamp(1rem, 6vw, 1.25rem);
     padding: 5% 8% 2%;
-    background-color: #749BC2;
     border-radius: 25px;
     margin-bottom: 5%;
     transition: all ease-in-out 1.2s;
+    border: solid;
 }
 
 .testimonial:hover {
