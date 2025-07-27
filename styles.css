@@ -56,8 +56,12 @@ blockquote {
     font-weight: 300;
 }
 
+blockquote p {
+    color: white;
+}
+
 blockquote a {
-    color: black;
+    color: white;
 }
 
 blockquote a:hover {
