@@ -254,12 +254,22 @@ input {
 .blog-article {
     font-weight: 300;
     margin: 0 0 1rem;
+    font-size: clamp(1rem, 6vw, 1.25rem);
+    padding: 5% 8% 2%;
+    border-radius: 25px;
+    margin-bottom: 5%;
+    transition: all ease-in-out 1.2s;
+    border: solid;
+}
 
+.blog-article:hover {
+    box-shadow: 10px -5px #91C8E4;
+    transition: 1s;
 }
 
 .blog-article a {
     font: black;
-    
+    background-color: #91C8E4;
 }
 
 /*responsive*/
