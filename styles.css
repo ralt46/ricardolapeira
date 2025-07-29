@@ -251,7 +251,16 @@ input {
 }
 
 /*blog*/
+.blog-article {
+    font-weight: 300;
+    margin: 0 0 1rem;
 
+}
+
+.blog-article a {
+    font: black;
+    
+}
 
 /*responsive*/
 @media (min-width: 400px) {
