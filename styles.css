@@ -250,6 +250,9 @@ input {
     width: 60%;
 }
 
+/*blog*/
+
+
 /*responsive*/
 @media (min-width: 400px) {
     .body-text{
@@ -307,6 +310,13 @@ input {
         'two three';
         min-width: 100%;
     }
+
+    #grid-blog {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        min-width: 100%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -343,6 +353,13 @@ input {
         grid-template-areas: 
         'one three'
         'two three';
+        min-width: 100%;
+    }
+
+    #grid-blog {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         min-width: 100%;
     }
 }
