@@ -9,7 +9,7 @@ class MyMenu extends HTMLElement {
                     <div class="collapse navbar-collapse" id="mynavbar">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                            <a class="nav-link" href="../main/index.html"><img src="../images/circle.png"></a>
+                            <a class="nav-link" href="../main/index.html" id="home-link"><img src="../images/circle-inactive.png" id="home-icon"></a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="../main/services.html">Services</a>
@@ -27,7 +27,28 @@ class MyMenu extends HTMLElement {
                     </div>
                 </div>
             </nav>
-        `
+        `;
+
+        this.setActiveLink();
+    }
+
+    setActiveLink() {
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = this.querySelectorAll('.nav-link');
+        const homeIcon = this.querySelector('#home-icon');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href').split('/').pop();
+            
+            if (linkPage === currentPage) {
+                link.classList.add('active');
+            
+                // Special case: If home link is active, change the image
+                if (link.id === 'home-link') {
+                    homeIcon.src = '../images/circle-active.png';
+                }
+            }
+        });
     }
 }
 
