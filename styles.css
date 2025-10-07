@@ -225,6 +225,10 @@ a.secondary-link:hover {
     border-bottom: 2px solid;
 }
 
+#home-link {
+    border-bottom: none;
+}
+
 /* Optional: Add smooth styling */
 .nav-link {
     transition: all 0.3s ease;
