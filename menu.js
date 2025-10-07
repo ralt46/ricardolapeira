@@ -9,7 +9,7 @@ class MyMenu extends HTMLElement {
                     <div class="collapse navbar-collapse" id="mynavbar">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                            <a class="nav-link" href="../main/home.html"><img src="../images/circle.png"></a>
+                            <a class="nav-link" href="../main/index.html"><img src="../images/circle.png"></a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="../main/services.html">Services</a>
