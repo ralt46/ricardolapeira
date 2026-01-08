@@ -221,7 +221,7 @@ a.secondary-link:hover {
 /* Menu active element */
 
 .nav-link.active {
-    font-weight: bold;
+    /*font-weight: bold;*/
     border-bottom: 2px solid;
 }
 
