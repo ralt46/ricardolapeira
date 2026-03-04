@@ -20,6 +20,6 @@ customElements.define('my-head', MyHead)
 // Umami Analytics
 const umamiScript = document.createElement('script');
 umamiScript.async = true;
-umamiScript.src = 'https://website-kwm6ph0cf-ralt46s-projects.vercel.app/script.js';
+umamiScript.src = 'https://website-iota-one-14.vercel.app/script.js';
 umamiScript.setAttribute('data-website-id', '97c9b19e-2c4e-460a-bb0a-f41c3a9643f4');
 document.head.appendChild(umamiScript);
