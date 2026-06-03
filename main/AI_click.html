@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type="module" src="../head.js"></script>
+	    <my-head></my-head>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	</head>
+
+	<body>
+		<script type="module" src="../menu.js"></script>
+    	<my-menu></my-menu>
+
+    	<div class="container body-text">
+	    	<button class="AI-buster">
+	    		<p>PRESS</p>
+	    	</button>
+	    	<script>
+	    		const btn = document.querySelector('.AI-buster');
+	    		console.log(btn);
+
+	    		let buster = false;
+	    		let ticker = null;
+	    		let start = null;
+
+	    		function press() {
+	    			buster = true;
+	    			start = Date.now();
+	    			ticker = setInterval(color, 100);
+	    		}
+
+	    		function color() {
+	    			const activeTime = (Date.now() - start)/1000;
+	    			
+	    			if (activeTime >= 3) {
+	    				btn.classList.remove('orange','yellow');
+	    				btn.classList.add('red');
+	    			} else if (activeTime >= 2) {
+	    				btn.classList.remove('red','yellow');
+	    				btn.classList.add('orange');
+	    			} else if (activeTime >= 1) {
+	    				btn.classList.remove('orange','red');
+	    				btn.classList.add('yellow');
+	    			}
+	    		}
+
+	    		function release() {
+	    			if (!buster) return;
+	    			buster = false;
+	    			clearInterval(ticker);
+	    			ticker = null;
+	    			
+	    			btn.classList.remove('yellow','orange','red');
+	    		}
+
+	    		btn.addEventListener('mousedown', press);
+	    		document.addEventListener('mouseup', release);
+
+	    	</script>
+	    </div>
+	</body>
+</html>

@@ -297,6 +297,40 @@ input {
     color: black;
 }
 
+/*AI Buster*/
+.AI-buster {
+    height:120px; 
+    width:120px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:50%; 
+    left:50%;
+    border: #91C8E4;
+    background-color: #91C8E4;
+    border-radius: 50%;
+    flex-shrink: 0;
+    font-size: 1 rem;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.AI-buster:hover {
+    transform: scale(1.07);
+    background: #749BC2;
+}
+
+.AI-buster.yellow {
+    background: #f9c412;
+}
+
+.AI-buster.orange {
+    background: #f4820a;
+}
+
+.AI-buster.red {
+    background: #e63946;
+}
+
 /*responsive*/
 @media (min-width: 400px) {
     .body-text{
