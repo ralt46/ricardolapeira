@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Briefly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6F4EB;
+    --ink: #000000;
+    --accent-light: #91C8E4;
+    --accent-mid: #749BC2;
+    --accent-dark: #4682A9;
+    --muted: #5B5B54;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Jost', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .mark {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--accent-dark);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    line-height: 1.3;
+    max-width: 18ch;
+    margin: 0 0 40px;
+  }
+
+  h3 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    margin: 0 0 10px;
+  }
+
+  label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .field-hint {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: -2px 0 12px;
+    line-height: 1.4;
+  }
+
+  .field {
+    margin-bottom: 32px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.05rem;
+    color: var(--ink);
+    padding: 12px 18px;
+    outline: none;
+  }
+
+  input[type="text"]:focus {
+    box-shadow: 0 0 0 2px var(--accent-mid);
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 180px;
+    resize: vertical;
+    border: 2px solid var(--ink);
+    background: white;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    color: var(--ink);
+    padding: 18px;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+  }
+
+  textarea:focus {
+    box-shadow: 6px -4px var(--accent-light);
+  }
+
+  ::placeholder {
+    color: #9C9A8E;
+  }
+
+  .chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .chip {
+    appearance: none;
+    border: 2px solid var(--ink);
+    background: white;
+    color: var(--ink);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .chip:hover {
+    background: var(--accent-light);
+  }
+
+  .chip[aria-pressed="true"] {
+    background: var(--accent-mid);
+    color: white;
+  }
+
+  .chip:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .chip:disabled:hover {
+    background: white;
+  }
+
+  details {
+    margin: -14px 0 32px;
+  }
+
+  summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent-dark);
+    user-select: none;
+  }
+
+  summary:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, .chip:focus-visible {
+    outline: 2px solid var(--accent-dark);
+    outline-offset: 2px;
+  }
+
+  .nudges-panel {
+    margin-top: 12px;
+    background: var(--accent-light);
+    border-radius: 20px;
+    padding: 18px 22px;
+  }
+
+  .nudges {
+    margin: 0;
+    padding: 0 0 0 18px;
+    font-size: 0.9rem;
+  }
+
+  .nudges li { margin-bottom: 6px; }
+  .nudges li:last-child { margin-bottom: 0; }
+
+  .list-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .list-row input[type="text"] {
+    flex: 1;
+  }
+
+  .remove-item {
+    appearance: none;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--ink);
+    background: white;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  .remove-item:hover {
+    background: var(--accent-light);
+  }
+
+  button.small {
+    font-size: 0.85rem;
+    padding: 7px 16px;
+  }
+
+  .sub-block {
+    margin-bottom: 28px;
+  }
+
+  .sub-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .card {
+    border: 2px solid var(--ink);
+    border-radius: 20px;
+    padding: 24px;
+  }
+
+  button.primary {
+    appearance: none;
+    border: none;
+    background: var(--accent-mid);
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 26px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  button.primary:hover { background: var(--accent-dark); }
+
+  #output {
+    margin-top: 56px;
+    padding-top: 8px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  #output.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #output h2 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: 0 0 16px;
+  }
+
+  pre {
+    background: white;
+    border: 2px solid var(--ink);
+    border-radius: 20px;
+    padding: 20px 22px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0 0 16px;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button.secondary {
+    appearance: none;
+    border: 2px solid var(--ink);
+    background: white;
+    color: var(--ink);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    padding: 9px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  button.secondary:hover { background: var(--accent-light); }
+
+  button.secondary:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  button.secondary:disabled:hover {
+    background: white;
+  }
+
+  .status {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-left: 4px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="mark">Briefly</div>
+    <h1>What is this project, really?</h1>
+
+    <div class="field">
+      <label for="name">Project name</label>
+      <input type="text" id="name" placeholder="Untitled Project">
+    </div>
+
+    <div class="field">
+      <label>What kind of project is this? <span style="font-weight:400;">(pick up to 2)</span></label>
+      <div class="chip-group" id="type-chips">
+        <button type="button" class="chip" data-type="product" aria-pressed="false">Product or app</button>
+        <button type="button" class="chip" data-type="creative" aria-pressed="false">Creative work</button>
+        <button type="button" class="chip" data-type="business" aria-pressed="false">Business or strategy</button>
+        <button type="button" class="chip" data-type="research" aria-pressed="false">Research or exploration</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="purpose">Purpose</label>
+      <p class="field-hint">The core reason this needs to exist. It doesn't need to be polished yet — sharpen it as you go.</p>
+      <textarea id="purpose" placeholder="Why does this project need to exist? What is it trying to change, solve, or make possible?"></textarea>
+    </div>
+
+    <details open>
+      <summary>Need a nudge?</summary>
+      <div class="nudges-panel">
+        <ul class="nudges" id="nudges"></ul>
+      </div>
+    </details>
+
+    <div class="field">
+      <label>Goals</label>
+      <p class="field-hint">Concrete, checkable outcomes — up to 5. If you've got more, they probably belong in the roadmap below.</p>
+      <div id="goals-list"></div>
+      <button type="button" class="secondary small" id="add-goal">+ Add another goal</button>
+    </div>
+
+    <div class="field">
+      <label>Roadmap sketch</label>
+      <p class="field-hint">A rough first pass, not a final plan. Thin sections here are completely fine.</p>
+      <div class="card">
+        <div class="sub-block">
+          <h3>Areas to improve or explore</h3>
+          <p class="field-hint">Weak spots, friction, or open questions worth digging into.</p>
+          <div id="improvements-list"></div>
+          <button type="button" class="secondary small" id="add-improvement">+ Add</button>
+        </div>
+        <div class="sub-block">
+          <h3>Resources you'll need</h3>
+          <p class="field-hint">People, tools, time, money, or access you don't have yet.</p>
+          <div id="resources-list"></div>
+          <button type="button" class="secondary small" id="add-resource">+ Add</button>
+        </div>
+        <div class="sub-block">
+          <h3>Known unknowns</h3>
+          <p class="field-hint">Things you genuinely don't know the answer to yet.</p>
+          <div id="unknowns-list"></div>
+          <button type="button" class="secondary small" id="add-unknown">+ Add</button>
+        </div>
+        <div class="sub-block">
+          <h3>Nice-to-haves</h3>
+          <p class="field-hint">Would be great, but not required for this to work.</p>
+          <div id="nice-list"></div>
+          <button type="button" class="secondary small" id="add-nice">+ Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Outcomes &amp; Outputs</label>
+      <p class="field-hint">What "done" actually produces — the effects you're hoping for, and the concrete things you'll have made.</p>
+      <div class="card">
+        <div class="sub-block">
+          <h3>Potential outcomes</h3>
+          <p class="field-hint">The result or impact if this succeeds — for people, for you, for the thing that matters.</p>
+          <div id="outcomes-list"></div>
+          <button type="button" class="secondary small" id="add-outcome">+ Add</button>
+        </div>
+        <div class="sub-block">
+          <h3>Desired outputs</h3>
+          <p class="field-hint">The concrete deliverables — a file, a product, a document, a decision.</p>
+          <div id="outputs-list"></div>
+          <button type="button" class="secondary small" id="add-output">+ Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="focus">What do you most want help with right now?</label>
+      <p class="field-hint">Optional — but this is what gets surfaced to the AI first. Point at whatever feels least resolved.</p>
+      <input type="text" id="focus" placeholder="e.g. Whether freelancers would actually pay for this">
+    </div>
+
+    <button class="primary" id="generate">Generate brief</button>
+
+    <div id="output">
+      <h2>Your brief so far</h2>
+      <pre id="markdown"></pre>
+      <div class="actions">
+        <button class="secondary" id="copy">Copy</button>
+        <button class="secondary" id="download">Download .md</button>
+        <span class="status" id="status"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const nameInput = document.getElementById('name');
+    const purposeInput = document.getElementById('purpose');
+    const focusInput = document.getElementById('focus');
+    const nudgesEl = document.getElementById('nudges');
+    const output = document.getElementById('output');
+    const markdownEl = document.getElementById('markdown');
+    const status = document.getElementById('status');
+    const chips = Array.from(document.querySelectorAll('.chip'));
+
+    let selectedTypes = [];
+
+    const nudgeSets = {
+      other: [
+        'What problem or gap are you responding to?',
+        'Who is this for, and what changes for them?',
+        'If this works, what does "working" look like?'
+      ],
+      product: [
+        'Who is the user, and what are they doing instead of this today?',
+        'What\u2019s the smallest version that would prove this is worth building?',
+        'What would make you shelve this?'
+      ],
+      creative: [
+        'What feeling or idea should someone walk away with?',
+        'Why this medium, and not another one?',
+        'What existing work is this in conversation with \u2014 and how does it differ?'
+      ],
+      business: [
+        'What\u2019s the cost of doing nothing?',
+        'Who needs to be convinced, and what do they actually care about?',
+        'What constraint is really driving this \u2014 time, money, people, or risk?'
+      ],
+      research: [
+        'What do you currently believe that you\u2019re not sure is true?',
+        'What would change your mind or approach?',
+        'What\u2019s tempting to explore but out of scope?'
+      ]
+    };
+
+    function renderNudges() {
+      const keys = selectedTypes.length ? selectedTypes : ['other'];
+      const questions = keys.flatMap(k => nudgeSets[k]);
+      nudgesEl.innerHTML = questions.map(q => `<li>${q}</li>`).join('');
+    }
+
+    function updateChipStates() {
+      chips.forEach(chip => {
+        const isSelected = selectedTypes.includes(chip.dataset.type);
+        chip.setAttribute('aria-pressed', isSelected);
+        chip.disabled = !isSelected && selectedTypes.length >= 2;
+      });
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const type = chip.dataset.type;
+        if (selectedTypes.includes(type)) {
+          selectedTypes = selectedTypes.filter(t => t !== type);
+        } else if (selectedTypes.length < 2) {
+          selectedTypes.push(type);
+        }
+        updateChipStates();
+        renderNudges();
+      });
+    });
+
+    updateChipStates();
+    renderNudges();
+
+    // Generic repeatable-list helper: wires up an "add" button and remove-per-row
+    // buttons for a given container, and returns a function to read its values.
+    // An optional max caps how many rows can exist at once.
+    function setupList(containerId, addBtnId, placeholder, max = Infinity) {
+      const container = document.getElementById(containerId);
+      const addBtn = document.getElementById(addBtnId);
+
+      function updateAddButtonState() {
+        addBtn.disabled = container.children.length >= max;
+      }
+
+      function createRow() {
+        if (container.children.length >= max) return;
+
+        const row = document.createElement('div');
+        row.className = 'list-row';
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'list-input';
+        input.placeholder = placeholder;
+
+        const removeBtn = document.createElement('button');
+        removeBtn.type = 'button';
+        removeBtn.className = 'remove-item';
+        removeBtn.setAttribute('aria-label', 'Remove');
+        removeBtn.textContent = '\u00d7';
+        removeBtn.addEventListener('click', () => {
+          row.remove();
+          updateAddButtonState();
+        });
+
+        row.appendChild(input);
+        row.appendChild(removeBtn);
+        container.appendChild(row);
+        updateAddButtonState();
+      }
+
+      addBtn.addEventListener('click', createRow);
+      createRow();
+
+      return () => Array.from(container.querySelectorAll('.list-input'))
+        .map(i => i.value.trim())
+        .filter(Boolean);
+    }
+
+    const getGoals = setupList('goals-list', 'add-goal', 'e.g. Ship a working prototype by Q2', 5);
+    const getImprovements = setupList('improvements-list', 'add-improvement', 'e.g. Onboarding flow feels clunky');
+    const getResources = setupList('resources-list', 'add-resource', "e.g. Budget for a designer");
+    const getUnknowns = setupList('unknowns-list', 'add-unknown', 'e.g. Will people actually pay for this?');
+    const getNiceToHaves = setupList('nice-list', 'add-nice', 'e.g. Dark mode');
+    const getOutcomes = setupList('outcomes-list', 'add-outcome', 'e.g. Team spends less time on manual reports');
+    const getDesiredOutputs = setupList('outputs-list', 'add-output', 'e.g. A working dashboard prototype');
+
+    function listOrFallback(values) {
+      return values.length ? values.map(v => `- ${v}`).join('\n') : '_Not yet defined — ask me about this._';
+    }
+
+    function buildMarkdown() {
+      const name = nameInput.value.trim() || 'Untitled Project';
+      const purpose = purposeInput.value.trim() || '_Not yet defined — ask me about this._';
+      const goalsBlock = listOrFallback(getGoals());
+      const improvementsBlock = listOrFallback(getImprovements());
+      const resourcesBlock = listOrFallback(getResources());
+      const unknownsBlock = listOrFallback(getUnknowns());
+      const niceBlock = listOrFallback(getNiceToHaves());
+      const outcomesBlock = listOrFallback(getOutcomes());
+      const outputsBlock = listOrFallback(getDesiredOutputs());
+
+      // Pull labels straight from the chip buttons so there's one source of
+      // truth for type names, rather than a second hardcoded copy here.
+      const typeLabels = selectedTypes.map(
+        t => chips.find(c => c.dataset.type === t).textContent
+      );
+      const typeLine = typeLabels.length ? `**Type:** ${typeLabels.join(', ')}` : '';
+
+      const preamble = `> This is a working project brief, not a finished spec. Where you see "_Not yet defined — ask me about this._", treat it as an open question — help me think it through with questions rather than filling it in for me. Everything else here is settled enough to build on.`;
+
+      const focus = focusInput.value.trim();
+      const focusLine = focus ? `**Focus for this session:** ${focus}` : '';
+
+      const sections = [
+        `# ${name}`,
+        preamble,
+        focusLine,
+        typeLine,
+        `## Purpose\n\n${purpose}`,
+        `## Goals\n\n${goalsBlock}`,
+        `## Roadmap\n\n### Areas to improve or explore\n\n${improvementsBlock}\n\n### Resources needed\n\n${resourcesBlock}\n\n### Known unknowns\n\n${unknownsBlock}\n\n### Nice-to-haves\n\n${niceBlock}`,
+        `## Outcomes & Outputs\n\n### Potential outcomes\n\n${outcomesBlock}\n\n### Desired outputs\n\n${outputsBlock}`
+      ];
+
+      // filter(Boolean) drops the Type line entirely when nothing is picked,
+      // instead of printing an empty or "not defined" placeholder for it.
+      return sections.filter(Boolean).join('\n\n') + '\n';
+    }
+
+    document.getElementById('generate').addEventListener('click', () => {
+      markdownEl.textContent = buildMarkdown();
+      output.classList.add('visible');
+      status.textContent = '';
+    });
+
+    document.getElementById('copy').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(markdownEl.textContent);
+        status.textContent = 'Copied.';
+      } catch {
+        status.textContent = 'Could not copy — select the text manually.';
+      }
+    });
+
+    document.getElementById('download').addEventListener('click', () => {
+      const name = (nameInput.value.trim() || 'untitled-project').toLowerCase().replace(/\s+/g, '-');
+      const blob = new Blob([markdownEl.textContent], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${name}.md`;
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>

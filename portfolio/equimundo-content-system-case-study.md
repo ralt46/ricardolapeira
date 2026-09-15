@@ -1,0 +1,57 @@
+# Equimundo
+
+### Project: Content Strategy, DesignOps & Knowledge System for a Global NGO
+
+*Some details are simplified to respect confidentiality agreements.*
+
+**UX Research · Content Strategy · DesignOps · Information Architecture**
+
+---
+
+Every organization has that one person. The one who has been there long enough to know how things actually get done: the workaround for the process that never quite worked, the answer to the question nobody ever wrote down. It works, right up until that person leaves.
+
+That was roughly where Equimundo, a global NGO running programs across seven countries, found itself when I joined.
+
+### The Challenge
+
+Equimundo needed to digitalize its workflows, but the real problem sat underneath that request. There was no centralized hub for the organization's processes or institutional knowledge. Information was scattered, operations varied significantly from one country team to another, and the knowledge that mattered most lived inside individual people rather than in any shared system.
+
+The cost of that was concrete. Project managers spent real time just navigating fragmented resources to do their jobs, and every time someone left the organization, they took a piece of irreplaceable institutional memory with them. Equimundo knew it needed a tool. What it actually needed was closer to an operating system for how the organization holds onto what it knows.
+
+### My Role
+
+I led the end-to-end design of a content strategy and DesignOps model for Equimundo, along with the processes and governance mechanisms behind it: UX research design and workshop facilitation, information architecture, content governance, and content creation and production, including AI-assisted workflows to help the platform scale across seven very different country contexts.
+
+### The Process
+
+I designed and ran interviews across every level of the organization, from frontline staff to senior management, and mapped how information actually moved day to day, and where it broke down.
+
+**That research surfaced something beyond the original brief: an opportunity to build proprietary upskilling content directly into the platform, so that team members in every country had access to the same core skills, not just the same folder of documents.**
+
+From there, I defined the content taxonomy, the information architecture, and the governance model: what would live on the platform, how it would be indexed, and, just as importantly, how it would stay accurate and useful long after launch instead of quietly turning into another abandoned wiki.
+
+### The Discovery
+
+Most projects like this stop at the brief: build a place to put the documents. I chose to treat governance as the actual deliverable, not something bolted on afterward. A knowledge hub nobody maintains is just a tidier way of losing information slowly instead of all at once.
+
+That is the engineer in me. A system does not stay reliable because people remember to update it. It stays reliable because the rules make forgetting hard. So alongside the architecture, I designed the mechanisms that would keep it working after I was no longer in the room.
+
+### The Outcome
+
+The platform launched as Equimundo's single source of truth: a centralized, structured knowledge hub accessible to team leaders, project managers, and staff across all seven countries. User testing shaped several rounds of improvement before it reached everyone.
+
+**Within a short period after launch, the organization saw a 50% reduction in operational inefficiencies directly linked to information access and knowledge management.**
+
+Equimundo's confidence in the work went beyond this one project. They later brought me back to design the experience for Aly, an AI-powered support tool built for their facilitators and educators, a story worth telling on its own.
+
+> "I really enjoyed working with Ricardo. His expertise in digital products helped shape the direction and voice of the project. He has a great talent for connecting insights from different domains, and always brings a forward-looking perspective, making him a truly strategic advisor."
+>
+> — Alejandro Ariza
+
+### Why This Matters
+
+If your organization's institutional knowledge is scattered across inboxes, personal drives, and the memory of your longest-tenured staff, you already know how fragile that is. The fix is not just a wiki. It is a system with real structure and real ownership behind it, one that keeps working after the consultant leaves and the people who built it move on.
+
+That is exactly the kind of problem I like solving: mapping how information actually moves through an organization, then building the structure and the rules that let it keep moving well.
+
+If that sounds like where your organization is right now, [let's talk](#).
