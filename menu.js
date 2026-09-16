@@ -22,7 +22,7 @@ class MyMenu extends HTMLElement {
                             </li>
                         </ul>
                         <div>
-                            <a href="contact.html"><button class="btn btn-primary" type="button">Contact</button></a>
+                            <a href="/main/contact.html"><button class="btn btn-primary" type="button">Contact</button></a>
                         </div>
                     </div>
                 </div>
